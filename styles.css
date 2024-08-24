@@ -15,6 +15,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -26,11 +27,10 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
-    
 }
-nav a:hover {
-    color:#4cae4c;
 
+nav a:hover {
+    color: #4cae4c;
 }
 
 main {
@@ -39,8 +39,9 @@ main {
 
 .apk-list {
     display: flex;
-    
+    flex-wrap: wrap; 
     gap: 20px;
+    justify-content: center;
 }
 
 .apk-item {
@@ -50,11 +51,13 @@ main {
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 100%; 
+    max-width: 300px; 
 }
 
 .apk-image {
     width: 100%;
-    max-width: 200px;
+    max-width: 100%; 
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -82,7 +85,37 @@ footer {
     padding: 10px;
     background-color: #35424a;
     color: white;
-    
-    bottom: 0;
     width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+    
+    nav a {
+        font-size: 18px;
+    }
+    
+    .apk-item {
+        padding: 10px;
+        max-width: 100%; 
+    }
+    
+    .download-button {
+        padding: 8px 12px;
+    }
 }
